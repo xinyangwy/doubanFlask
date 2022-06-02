@@ -1,0 +1,3 @@
+[console_scripts]
+jupyter-nbclassic = nbclassic.notebookapp:main
+

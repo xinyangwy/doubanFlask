@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: jupyterlab-server
+Version: 2.7.2
+Summary: A set of server components for JupyterLab and JupyterLab like applications .
+Home-page: https://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: UNKNOWN
+Keywords: jupyter,jupyterlab
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: babel
+Requires-Dist: entrypoints (>=0.2.2)
+Requires-Dist: jinja2 (>=2.10)
+Requires-Dist: json5
+Requires-Dist: jsonschema (>=3.0.1)
+Requires-Dist: packaging
+Requires-Dist: requests
+Requires-Dist: jupyter-server (~=1.4)
+Provides-Extra: test
+Requires-Dist: codecov ; extra == 'test'
+Requires-Dist: ipykernel ; extra == 'test'
+Requires-Dist: pytest (>=5.3.2) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: jupyter-server[test] ; extra == 'test'
+Requires-Dist: openapi-core (~=0.14.0) ; extra == 'test'
+Requires-Dist: pytest-console-scripts ; extra == 'test'
+Requires-Dist: strict-rfc3339 ; extra == 'test'
+Requires-Dist: ruamel.yaml ; extra == 'test'
+Requires-Dist: wheel ; extra == 'test'
+
+# jupyterlab server
+
+[![Coverage](https://codecov.io/gh/jupyterlab/jupyterlab_server/branch/master/graph/badge.svg)](https://codecov.io/gh/jupyterlab/jupyterlab_server)
+[![Build Status](https://github.com/jupyterlab/jupyterlab_server/workflows/Tests/badge.svg?branch=master)](https://github.com/jupyterlab/jupyterlab_server/actions?query=branch%3Amaster+workflow%3A%22Tests%22)
+[![Documentation Status](https://readthedocs.org/projects/jupyterlab_server/badge/?version=stable)](http://jupyterlab_server.readthedocs.io/en/stable/)
+
+
+## Install
+
+`pip install jupyterlab_server`
+
+## Usage
+
+The application author creates a JupyterLab build on their machine
+using the core JupyterLab application.  They can then serve their
+files by subclassing the `LabServerApp` with the appropriate
+configuration and creating a Python entry point that launches the app.
+
+
+## Contribution
+
+Please see `CONTRIBUTING.md` for details.
+
+
