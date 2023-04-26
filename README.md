@@ -11,4 +11,4 @@
 + 【注：此文件中含有python虚拟环境venv文件夹，版本python3.8，记得修改venv目录中的pyvenv.cfg文件中的home路径，修改到自己电脑中的python的对应的位置】
 
 
-## 记得修改 doubanFlask/venv/pyvenv.cfg 文件中的相关路径
+> 记得修改 doubanFlask/venv/pyvenv.cfg 文件中的相关路径
