@@ -12,3 +12,44 @@
 
 
 > 记得修改 doubanFlask/venv/pyvenv.cfg 文件中的相关路径
+
+---
+
+# 注：一些大致的说明
++ 对应的html文本位置标注：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a92675c8b917930252f0daba94cbbc6.png)
+# 一、爬取“豆瓣电影 Top 250”相关信息：
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/409013183c364e74148e6cf72003e3c6.png)
+## 1、准备工作
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fff195d9f84512dd05f53220a1d2c325.png)
+## 2、获取数据
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a25567299fc43e70c783b374d2769922.png)
+### 补充：urllib
+urllib的详解使用 - 简书：[https://www.jianshu.com/p/63dad93d7000](https://www.jianshu.com/p/63dad93d7000)
+## 3、标签解析
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d615234b4ab20614283ada344e0a4d15.png)
+### 补充：BeautifulSoup4和re
+BeautifulSoup4相关介绍 - web教程网：[http://www.jsphp.net/python/show-24-214-1.html](http://www.jsphp.net/python/show-24-214-1.html)
+Python 正则表达式 | 菜鸟教程：[https://www.runoob.com/python/python-reg-expressions.html](https://www.runoob.com/python/python-reg-expressions.html)
+## 4、保存数据
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a59488905c37bd1c4b832a98e0b2d0f8.png)
+### 补充：xlwt
+python模块之xlwt模块:[https://blog.csdn.net/qq_31851107/article/details/103691790](https://blog.csdn.net/qq_31851107/article/details/103691790)
+
+爬取成功后生成的Excel表格：
+（注：生成的xls文件路径：`savepath = "豆瓣电影top250.xls"  # 默认与此.py文件在同一个目录下`）
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3ec79e2dac1a095203992ed021c8521b.png)
+# 二、爬取/下载top250电影对应的封面
+对“爬取“豆瓣电影 Top 250”相关信息”的代码适当修改，正则表达式提取部分只保留`findImgSrc = re.compile(r'<img.*src="(.*?)"', re.S)`部分，
+找到所有图片的链接之后，保存图片的关键函数如下（含有对图片的命名）：
+```python
+def DownloadImg(datalist):
+    x = 1
+    for imgurl in datalist:
+        urllib.request.urlretrieve(imgurl, 'D:\IDMdownload\Image\%s.jpg' % x)
+        x += 1
+        print("已经爬取", x, "张图片")
+```
+## 效果展示
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/77ea32b62fe302a0874204f82825a5dc.gif)
+
