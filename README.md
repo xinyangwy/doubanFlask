@@ -21,7 +21,8 @@
 # 一、爬取“豆瓣电影 Top 250”相关信息：
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/409013183c364e74148e6cf72003e3c6.png)
 ## 1、准备工作
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fff195d9f84512dd05f53220a1d2c325.png)
+![image](https://github.com/user-attachments/assets/ebe26ecf-ef03-4f7c-9326-7d038d2a43d0)
+
 ## 2、获取数据
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a25567299fc43e70c783b374d2769922.png)
 ### 补充：urllib
