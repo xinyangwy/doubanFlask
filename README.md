@@ -57,7 +57,8 @@ def DownloadImg(datalist):
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/77ea32b62fe302a0874204f82825a5dc.gif)
 
 # 爬取豆瓣top250信息并存入数据库中 | sqlite3:
-![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6c176ab021cc3da19ff6e8c0475dd90.png)
+![e6c176ab021cc3da19ff6e8c0475dd90](https://github.com/user-attachments/assets/490adc1a-d38d-492e-9f33-e41b2d6978c1)
+
 
 ## 遇到的问题：
 
