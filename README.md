@@ -132,7 +132,8 @@ html = response.read().decode("utf-8").replace('&nbsp;','')
 ```python
 pip freeze >requirements.txt
 ```
-![image-20210909005953193](https://i-blog.csdnimg.cn/blog_migrate/0cfa7dfc1702bc1a8e98124e0f9b708f.png)
+![0cfa7dfc1702bc1a8e98124e0f9b708f](https://github.com/user-attachments/assets/688792e6-5387-4cf2-9b0b-a89f3a4f6ed8)
+
 ### 4.在python项目管理器添加python项目
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd46cffd72a6f141ff8db3b172a253b6.png)
 注：如果python 项目管理器的项目状态一直显示：“已暂停”，可以尝试重新安装python 项目管理器。
