@@ -56,12 +56,12 @@ def DownloadImg(datalist):
 ## 效果展示
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/77ea32b62fe302a0874204f82825a5dc.gif)
 
-## 爬取豆瓣top250信息并存入数据库中 | sqlite3:
+# 爬取豆瓣top250信息并存入数据库中 | sqlite3:
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6c176ab021cc3da19ff6e8c0475dd90.png)
 
-# 遇到的问题：
+## 遇到的问题：
 
-## 1.关于数据库表格中出现：NBSP
+### 1.关于数据库表格中出现：NBSP
 
 ![image-20210904163239086](https://i-blog.csdnimg.cn/blog_migrate/29cc814b911256c9cdf11c0c97f1a705.png)
 
@@ -81,7 +81,7 @@ html = response.read().decode("utf-8").replace('&nbsp;','')
 
 ![image-20210904172027665](https://i-blog.csdnimg.cn/blog_migrate/e694c68714d354714b31d4a47d9f9e43.png)
 
-## 2. 为什么HTML字段中会出现&NBSP？
+### 2. 为什么HTML字段中会出现&NBSP？
 
 + 在html代码中每输入一个转义字符&nbsp就表示一个空格，输入十个&nbsp，页面中就显示10个空格位置。
 + 而在html代码中输入空格，不管输入多少个空格，最终在页面中显示的空格位置只有一个。
@@ -92,7 +92,7 @@ html = response.read().decode("utf-8").replace('&nbsp;','')
 
 ![img](https://i-blog.csdnimg.cn/blog_migrate/e9b38fd4ebaeeb82cd53b693bf8430bb.png)
 
-## 3.java.io.IOException: 不能删除数据库文件
+### 3.java.io.IOException: 不能删除数据库文件
 
 ![image-20210904172503424](https://i-blog.csdnimg.cn/blog_migrate/15721e7b84f4ccacda1af8aa48ceed6a.png)
 
@@ -106,7 +106,7 @@ html = response.read().decode("utf-8").replace('&nbsp;','')
 
 参考：[java.io.IOException: 不能删除数据库文件](https://blog.csdn.net/gets_s/article/details/112177029)
 
-## 4.  关于decode和encode的区别
+### 4.  关于decode和encode的区别
 
 + 首先要搞清楚，字符串在Python内部的表示是unicode编码，因此，在做编码转换时，通常需要以unicode作为中间编码；
 + （即先将其他编码的字符串解码（decode）成unicode，再从unicode编码（encode）成另一种编码。）
@@ -120,25 +120,25 @@ html = response.read().decode("utf-8").replace('&nbsp;','')
 参考：[decode和encode的区别](https://segmentfault.com/a/1190000015788943)
 
 ## 豆瓣电影数据可视化（Flask框架）部署在服务器上
-# 1. 在宝塔面板下载“python项目管理器”
+### 1. 在宝塔面板下载“python项目管理器”
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14e671c7ab0414d5a1f52d23b960f972.png)
-# 2. 上传文件至服务器
+### 2. 上传文件至服务器
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d1e372c6c45d02370d39ad993c23ba3.png)
 
-# 3. 生成requirements.txt文件
+### 3. 生成requirements.txt文件
 进入你的项目根目录，使用命令把项目依赖包导出到项目根目录。
 
 ```python
 pip freeze >requirements.txt
 ```
 ![image-20210909005953193](https://i-blog.csdnimg.cn/blog_migrate/0cfa7dfc1702bc1a8e98124e0f9b708f.png)
-# 4.在python项目管理器添加python项目
+### 4.在python项目管理器添加python项目
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd46cffd72a6f141ff8db3b172a253b6.png)
 注：如果python 项目管理器的项目状态一直显示：“已暂停”，可以尝试重新安装python 项目管理器。
 + 相关：
 	+ [部署 Flask 应用时，为什么会需要 gunicorn 或 uWSGI？](https://www.zhihu.com/question/37148421?sort=created)
 	+ [深入理解uwsgi和gunicorn网络模型](https://www.jianshu.com/p/2b184c5eb90d)
-# 5. 演示
+### 5. 演示
 + 在线演示地址：[链接](http://101.32.183.14:5000/index)
 + 本地编译演示：[https://www.bilibili.com/video/bv1rU4y1P7bg](https://www.bilibili.com/video/bv1rU4y1P7bg)
 + 源代码下载地址（蓝奏云）：[https://wws.lanzoui.com/i5Sg4ttokwj](https://wws.lanzoui.com/i5Sg4ttokwj)
